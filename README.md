@@ -20,6 +20,8 @@ Clean Architectureを採用しています
 | usecase      | app business rules        |
 | domain       | enterprise business rules |
 
+![図の解説](https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.amazonaws.com%2F0%2F293368%2F578d4b20-bd79-1933-e08d-9f6cf306e605.jpeg?ixlib=rb-1.2.2&auto=compress%2Cformat&gif-q=60&w=1400&fit=max&s=4f7bdcb5466ad4fd293c91375f8f2589)
+
 ```
 lib/src
 ├── adapter
