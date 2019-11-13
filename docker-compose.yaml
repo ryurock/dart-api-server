@@ -1,0 +1,34 @@
+version: '3'
+services:
+  app:
+    build:
+      context: dockerfiles/app
+    container_name: "dart-server-v2"
+    ports:
+      - "50051:50051"
+    volumes:
+      - "./:/app"
+      - "~/.aws:/root"
+    environment:
+      SERVER_LISTEN_ADDRESS: 0.0.0.0
+      SERVER_LISTEN_PORT: 50051
+    tty: true
+    stdin_open: true
+    depends_on:
+      - mysql
+    # command: dart bin/server.dart
+
+  mysql:
+    build:
+      context: dockerfiles/mysql
+    container_name: "dart-server-db-v2"
+    ports:
+      - "3313:3306"
+    volumes:
+      - "./tmp/mysql/volumes/mysql:/var/lib/mysql"
+      - "./tmp/mysql/volumes/initdb:/docker-entrypoint-initdb.d"
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_PORT_3306_TCP_ADDR: "localhost"
+      MYSQL_PORT_3306_TCP_PORT: 3306
+    tty: true

@@ -1,0 +1,11 @@
+description: 'api server router matching setting'
+routes:
+  get:
+    - path: "/"
+    - path: "/task"
+      handler: hoge
+    - path: "/task/:id"
+  post:
+    - path: "/task/create"
+    - path: "/task/update"
+    - path: "/task/delete"

@@ -1,0 +1,11 @@
+name: "appserver"
+description: TodoList REST API Server
+environment:
+  sdk: '>=2.0.0 <3.0.0'
+dependencies:
+  mysql1: ^0.17.0+1
+  http_server: ^0.9.8+3
+  yaml: ^2.2.0
+  args: ^1.5.2
+executables:
+  appserver:
