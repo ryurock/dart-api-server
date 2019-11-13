@@ -19,3 +19,24 @@ Clean Architectureを採用しています
 | adapter      | Interface Adapter         |
 | usecase      | app business rules        |
 | domain       | enterprise business rules |
+
+```
+lib/src
+├── adapter
+│   ├── controllers
+│   │   └── task_controller.dart
+│   └── db
+│       ├── sql_handler.dart (interface)
+│       └── task_repository.dart 
+├── domain
+│   └── task.dart
+├── drivers
+│   ├── db
+│   │   └── mysql_handler.dart
+│   └── http
+│       └── router.dart
+└── usecase
+    └── interfaces
+        ├── task_interactor.dart
+        └── task_repository.dart (interface)
+```
